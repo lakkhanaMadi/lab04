@@ -51,3 +51,17 @@ http.createServer(function(req,res){
 //using module in branch -> feature/module
 const myModule = require('./my-module.js');
 console.log(myModule.myFunction());
+
+//promises in branch -> feature/promises
+const myPromise = new Promise((resolve, reject) => {
+if (condition) {
+resolve('Success!');
+} else {
+reject('Failure!');
+}
+});
+myPromise.then((result) => {
+console.log(result);
+}).catch((error) => {
+console.log(error);
+});
