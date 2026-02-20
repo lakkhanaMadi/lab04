@@ -46,3 +46,8 @@ http.createServer(function(req,res){
   res.write('Hello World');
   res.end();
 }).listen(8080);
+
+
+//using module in branch -> feature/module
+const myModule = require('./my-module.js');
+console.log(myModule.myFunction());
